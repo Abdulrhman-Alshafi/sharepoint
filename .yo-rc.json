@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.1",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "my-first-real-demo",
+    "libraryId": "e8d137bd-b02e-4f45-904f-f241d67beaca",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "myFirstRealDemo",
+    "solutionShortDescription": "myFirstRealDemo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

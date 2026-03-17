@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "my-first-real-demo-client-side-solution",
+    "id": "e8d137bd-b02e-4f45-904f-f241d67beaca",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "myFirstRealDemo description"
+      },
+      "longDescription": {
+        "default": "myFirstRealDemo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "my-first-real-demo Feature",
+        "description": "The feature that activates elements of the my-first-real-demo solution.",
+        "id": "d19c57b1-ed0e-45eb-a34f-af537b1225df",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/my-first-real-demo.sppkg"
+  }
+}
