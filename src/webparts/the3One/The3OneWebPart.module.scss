@@ -1,0 +1,319 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.the3One {
+  overflow: hidden;
+  padding: 0;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+// Premium Header
+.premiumHeader {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.05) 10px,
+      rgba(255, 255, 255, 0.05) 20px
+    );
+    animation: slide 40s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+.premiumBadge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+// Team Section
+.teamSection {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 3px solid transparent;
+  
+  &:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+    border-color: #4facfe;
+    
+    .avatar {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+}
+
+.avatar {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+  display: inline-block;
+}
+
+.role {
+  color: #4facfe;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.bio {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contact {
+  a {
+    display: inline-block;
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #4facfe;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: #4facfe;
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Values Section
+.valuesSection {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  color: #2c3e50;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2);
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.valueIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+// CTA Section
+.ctaSection {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.95;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: white;
+  color: #4facfe;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+}
+
+.ctaButtonSecondary {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 3px solid white;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: white;
+    color: #4facfe;
+    transform: translateY(-3px);
+  }
+}
+
+// Footer
+.footer {
+  padding: 1.5rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  
+  p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+}
+
+.env {
+  font-size: 0.85rem;
+  font-style: italic;
+}

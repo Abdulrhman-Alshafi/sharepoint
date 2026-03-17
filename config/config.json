@@ -9,10 +9,28 @@
           "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
         }
       ]
+    },
+    "the-2-ndone-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/the2Ndone/The2NdoneWebPart.js",
+          "manifest": "./src/webparts/the2Ndone/The2NdoneWebPart.manifest.json"
+        }
+      ]
+    },
+    "the-3-one-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/the3One/The3OneWebPart.js",
+          "manifest": "./src/webparts/the3One/The3OneWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
+    "The2NdoneWebPartStrings": "lib/webparts/the2Ndone/loc/{locale}.js",
+    "The3OneWebPartStrings": "lib/webparts/the3One/loc/{locale}.js"
   }
 }

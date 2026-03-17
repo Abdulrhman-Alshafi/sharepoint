@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "6c41d69c-bafd-4463-8626-cf1c422374b3",
-  "alias": "HelloWorldWebPart",
+  "id": "4534172f-f878-4c96-bd6d-254f25de5597",
+  "alias": "The2NdoneWebPart",
   "componentType": "WebPart",
 
   // The "*" signifies that the version should be taken from the package.json
@@ -18,11 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "Optimum Partners" },
-    "description": { "default": "Optimum Partners - Your trusted programming and technology solutions partner" },
-    "officeFabricIconFontName": "DeveloperTools",
+    "title": { "default": "Featured Projects" },
+    "description": { "default": "Showcase of Optimum Partners' most successful projects and client testimonials" },
+    "officeFabricIconFontName": "ProjectCollection",
     "properties": {
-      "description": "Delivering innovative software solutions since 2014"
+      "description": "World-class project delivery and client satisfaction"
     }
   }]
 }

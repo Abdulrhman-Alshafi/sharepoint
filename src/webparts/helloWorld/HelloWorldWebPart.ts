@@ -22,27 +22,93 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   public render(): void {
     this.domElement.innerHTML = `
     <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
-      <div class="${styles.welcome}">
-        <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
-        <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
-        <div>${this._environmentMessage}</div>
-        <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
+      <!-- Hero Section -->
+      <div class="${styles.hero}">
+        <div class="${styles.heroContent}">
+          <h1 class="${styles.companyName}">✨ Optimum Partners</h1>
+          <p class="${styles.tagline}">Transforming Ideas into Digital Excellence</p>
+          <p class="${styles.greeting}">Welcome, <strong>${escape(this.context.pageContext.user.displayName)}</strong>!</p>
+        </div>
       </div>
-      <div>
-        <h3>Welcome to SharePoint Framework!</h3>
-        <p>
-        The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-        </p>
-        <h4>Learn more about SPFx development:</h4>
-          <ul class="${styles.links}">
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
+
+      <!-- Services Section -->
+      <div class="${styles.services}">
+        <h2 class="${styles.sectionTitle}">Our Expertise</h2>
+        <div class="${styles.serviceGrid}">
+          <div class="${styles.serviceCard}">
+            <div class="${styles.icon}">💻</div>
+            <h3>Web Development</h3>
+            <p>Building responsive, scalable web applications using modern frameworks like React, Angular, and Vue</p>
+          </div>
+          <div class="${styles.serviceCard}">
+            <div class="${styles.icon}">📱</div>
+            <h3>Mobile Apps</h3>
+            <p>Native and cross-platform mobile solutions for iOS and Android using React Native and Flutter</p>
+          </div>
+          <div class="${styles.serviceCard}">
+            <div class="${styles.icon}">☁️</div>
+            <h3>Cloud Solutions</h3>
+            <p>Enterprise-grade cloud architecture and DevOps on Azure, AWS, and Microsoft 365</p>
+          </div>
+          <div class="${styles.serviceCard}">
+            <div class="${styles.icon}">🤖</div>
+            <h3>AI & Automation</h3>
+            <p>Intelligent automation and AI-powered solutions to optimize your business processes</p>
+          </div>
+          <div class="${styles.serviceCard} ${styles.premium}">
+            <div class="${styles.icon}">🔒</div>
+            <h3>Cybersecurity</h3>
+            <p>Advanced security solutions, penetration testing, and compliance management to protect your digital assets</p>
+            <div class="${styles.premiumBadge}">Premium</div>
+          </div>
+          <div class="${styles.serviceCard} ${styles.premium}">
+            <div class="${styles.icon}">📊</div>
+            <h3>Data Analytics</h3>
+            <p>Transform your data into actionable insights with advanced analytics, BI dashboards, and machine learning</p>
+            <div class="${styles.premiumBadge}">Premium</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="${styles.stats}">
+        <div class="${styles.statItem}">
+          <div class="${styles.statNumber}">150+</div>
+          <div class="${styles.statLabel}">Projects Delivered</div>
+        </div>
+        <div class="${styles.statItem}">
+          <div class="${styles.statNumber}">50+</div>
+          <div class="${styles.statLabel}">Happy Clients</div>
+        </div>
+        <div class="${styles.statItem}">
+          <div class="${styles.statNumber}">10+</div>
+          <div class="${styles.statLabel}">Years Experience</div>
+        </div>
+        <div class="${styles.statItem}">
+          <div class="${styles.statNumber}">98%</div>
+          <div class="${styles.statLabel}">Client Satisfaction</div>
+        </div>
+      </div>
+
+      <!-- Technologies Section -->
+      <div class="${styles.technologies}">
+        <h2 class="${styles.sectionTitle}">Technologies We Master</h2>
+        <div class="${styles.techBadges}">
+          <span class="${styles.badge}">React</span>
+          <span class="${styles.badge}">TypeScript</span>
+          <span class="${styles.badge}">Node.js</span>
+          <span class="${styles.badge}">Azure</span>
+          <span class="${styles.badge}">SharePoint</span>
+          <span class="${styles.badge}">Python</span>
+          <span class="${styles.badge}">Docker</span>
+          <span class="${styles.badge}">Kubernetes</span>
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="${styles.footer}">
+        <p><strong>Description:</strong> ${escape(this.properties.description)}</p>
+        <p class="${styles.env}">${this._environmentMessage}</p>
       </div>
     </section>`;
   }

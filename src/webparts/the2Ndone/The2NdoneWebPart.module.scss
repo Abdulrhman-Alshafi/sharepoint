@@ -1,0 +1,250 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.the2Ndone {
+  overflow: hidden;
+  padding: 0;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+// Premium Header
+.premiumHeader {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.premiumBadge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+// Projects Section
+.projectsSection {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(240, 147, 251, 0.3);
+    border-color: #f093fb;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projectIcon {
+  font-size: 2.5rem;
+}
+
+.successBadge {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.client {
+  color: #f5576c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.metrics {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.metric {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  
+  strong {
+    font-weight: 700;
+  }
+}
+
+// Testimonials Section
+.testimonialsSection {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  color: #2c3e50;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  color: white;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+  
+  p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+  }
+}
+
+.quote {
+  font-size: 4rem;
+  line-height: 1;
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: Georgia, serif;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  
+  strong {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  span {
+    opacity: 0.9;
+    font-size: 0.9rem;
+  }
+}
+
+// Footer
+.footer {
+  padding: 1.5rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  
+  p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+}
+
+.env {
+  font-size: 0.85rem;
+  font-style: italic;
+}
